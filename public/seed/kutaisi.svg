@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of a cliffside cave city in golden light">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ece3d3"/><stop offset="1" stop-color="#b89b7a"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#b89b7a" stop-opacity="0"/><stop offset="1" stop-color="#4a3a2c" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="680" cy="271" r="77" fill="#fff6e6" opacity=".85"/>
+<path d="M0 1000 L0 560 Q-89 157 0 246 Q89 324 178 367 Q267 363 356 414 Q444 303 533 332 Q622 181 711 241 Q800 399 889 484 Q978 253 1067 271 Q1156 401 1244 405 Q1333 180 1422 301 Q1511 449 1600 530 L1600 1000Z" fill="#b8a58c"/>
+<path d="M0 1000 L0 700 Q-114 586 0 661 Q114 569 229 615 Q343 592 457 655 Q571 564 686 588 Q800 593 914 645 Q1029 539 1143 561 Q1257 443 1371 509 Q1486 585 1600 600 L1600 1000Z" fill="#8a6f55"/>
+<path d="M0 1000 V520 Q800 440 1600 540 V1000Z" fill="#4a3a2c"/>
+<path d="M175.3348805593955 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M264.4004967782649 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M393.16406781466867 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M483.80141899632355 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M701.8880127099752 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1054.9135143798374 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1167.9096287013542 620 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M156.53359931266567 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M272.7114684193914 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M386.92322619581745 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1148.165073705914 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1278.1814096347343 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1363.7425503897214 700 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M391.10143720689297 780 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M940.0812686747319 780 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1049.1307780235684 780 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1256.4899696207092 780 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M178.81171715856144 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M288.48221545036984 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M499.7443702862339 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M612.9521209294685 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M724.6297201675501 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M827.1290441356269 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M947.3431960015293 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1038.9877988253663 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1151.1572612594614 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<path d="M1367.1451273640362 860 q14 -30 28 0 v18 h-28z" fill="#ece3d3" opacity=".5"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

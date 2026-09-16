@@ -1,0 +1,261 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/*
+  GeorgiaGuided tokens
+  Light: tuff-stone paper, walnut ink, Saperavi wine, moss, brass.
+  Dark:  night-slate, warm parchment ink, brass and a lifted Saperavi.
+*/
+:root {
+  --paper: #edeee8;
+  --paper-raised: #f7f7f3;
+  --ink: #1e1b18;
+  --ink-soft: #57524b;
+  --line: #d3d3c9;
+  --wine: #6b1f3a;
+  --wine-ink: #ffffff;
+  --moss: #4f5c44;
+  --brass: #8a6d32;
+  --focus: #6b1f3a;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --paper: #151517;
+  --paper-raised: #1e1d21;
+  --ink: #ece6dc;
+  --ink-soft: #aaa398;
+  --line: #34323a;
+  --wine: #c9a45c;
+  --wine-ink: #151517;
+  --moss: #9fae8f;
+  --brass: #c9a45c;
+  --focus: #e0c07f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--wine);
+  --color-accent-ink: var(--wine-ink);
+  --color-moss: var(--moss);
+  --color-brass: var(--brass);
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-instrument), "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  --breakpoint-xs: 23rem;
+  --ease-quiet: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--wine); color: var(--wine-ink); }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 84rem;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 3rem);
+  }
+  .section-y { padding-block: clamp(4rem, 9vw, 8rem); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: 999px;
+    transition: background-color 0.25s var(--ease-quiet), color 0.25s var(--ease-quiet), border-color 0.25s var(--ease-quiet), transform 0.2s var(--ease-quiet);
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-primary { background: var(--wine); color: var(--wine-ink); }
+  .btn-primary:hover { background: color-mix(in oklab, var(--wine) 85%, var(--ink)); }
+  .btn-ghost { border: 1px solid currentColor; }
+  .btn-ghost:hover { background: color-mix(in oklab, currentColor 10%, transparent); }
+  .btn-light { background: #f7f7f3; color: #1e1b18; }
+  .btn-light:hover { background: #ffffff; }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s var(--ease-quiet);
+  }
+  .link-underline:hover, .link-underline:focus-visible { background-size: 100% 1px; }
+
+  .field-label { display: block; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.4rem; }
+  .field {
+    width: 100%;
+    min-height: 3rem;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 0.375rem;
+    padding: 0.7rem 0.9rem;
+    color: var(--ink);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  .field:hover { border-color: color-mix(in oklab, var(--ink) 35%, var(--line)); }
+  .field:focus { outline: none; border-color: var(--wine); box-shadow: 0 0 0 3px color-mix(in oklab, var(--wine) 22%, transparent); }
+  .field[aria-invalid="true"] { border-color: #b3261e; }
+  .field-error { color: #b3261e; font-size: 0.85rem; margin-top: 0.35rem; }
+  [data-theme="dark"] .field-error { color: #f2b8b5; }
+
+  .img-reveal { animation: img-reveal 1.4s var(--ease-quiet) both; }
+  .hero-rise { animation: hero-rise 1s var(--ease-quiet) both; }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode: overlay;
+  }
+}
+
+@keyframes img-reveal {
+  from { transform: scale(1.08); opacity: 0.2; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes hero-rise {
+  from { transform: translateY(18px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Editorial prose */
+.prose-gg {
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-links: var(--wine);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-bullets: var(--brass);
+  --tw-prose-counters: var(--brass);
+  --tw-prose-quotes: var(--ink);
+  --tw-prose-quote-borders: var(--wine);
+  --tw-prose-hr: var(--line);
+  --tw-prose-th-borders: var(--line);
+  --tw-prose-td-borders: var(--line);
+  --tw-prose-captions: var(--ink-soft);
+  --tw-prose-code: var(--ink);
+}
+.prose-gg :where(h2) { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-top: 2.2em; scroll-margin-top: 6rem; }
+.prose-gg :where(h3) { font-size: 1.45rem; scroll-margin-top: 6rem; }
+.prose-gg :where(a) { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.prose-gg :where(p, li) { line-height: 1.75; }
+
+/* ─── Admin UI ─── */
+@layer components {
+  .adm { font-size: 0.9375rem; line-height: 1.5; }
+  .adm h1, .adm h2, .adm h3 { font-family: var(--font-sans); letter-spacing: -0.01em; line-height: 1.25; }
+  .adm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 2.25rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+  }
+  .adm-btn:hover:not(:disabled) { border-color: color-mix(in oklab, var(--ink) 30%, var(--line)); background: color-mix(in oklab, var(--ink) 4%, var(--paper-raised)); }
+  .adm-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .adm-btn-primary { background: var(--wine); border-color: var(--wine); color: var(--wine-ink); }
+  .adm-btn-primary:hover:not(:disabled) { background: color-mix(in oklab, var(--wine) 85%, var(--ink)); border-color: transparent; }
+  .adm-btn-danger { background: #b3261e; border-color: #b3261e; color: #fff; }
+  .adm-btn-danger:hover:not(:disabled) { background: #8c1d18; }
+  .adm-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    color: var(--ink-soft);
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .adm-icon:hover:not(:disabled) { background: color-mix(in oklab, var(--ink) 8%, transparent); color: var(--ink); }
+  .adm-icon:disabled { opacity: 0.3; }
+  .adm-input {
+    width: 100%;
+    min-height: 2.4rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 0.45rem;
+    background: var(--paper-raised);
+    color: var(--ink);
+    font-size: 0.9375rem;
+  }
+  textarea.adm-input { line-height: 1.55; resize: vertical; }
+  .adm-input:focus { outline: none; border-color: var(--wine); box-shadow: 0 0 0 3px color-mix(in oklab, var(--wine) 20%, transparent); }
+  .adm-input[aria-invalid="true"] { border-color: #b3261e; }
+  .adm-label { display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .adm-help { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.3rem; }
+  .adm-error { font-size: 0.8rem; color: #b3261e; margin-top: 0.3rem; }
+  [data-theme="dark"] .adm-error { color: #f2b8b5; }
+  .adm-card { background: var(--paper-raised); border: 1px solid var(--line); border-radius: 0.75rem; }
+  .adm-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .adm-table th { text-align: left; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-soft); padding: 0.7rem 1rem; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .adm-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .adm-table tr:last-child td { border-bottom: 0; }
+  .adm-table tbody tr:hover { background: color-mix(in oklab, var(--ink) 3%, transparent); }
+  .adm-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; border: 1px solid transparent; white-space: nowrap; }
+}

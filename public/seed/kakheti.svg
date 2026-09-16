@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of vineyard rows in the Alazani Valley">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dcc0"/><stop offset="1" stop-color="#b2665b"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#b2665b" stop-opacity="0"/><stop offset="1" stop-color="#3b1a26" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="494" cy="278" r="81" fill="#ffe9c4" opacity=".85"/>
+<path d="M0 1000 L0 560 Q-89 201 0 296 Q89 215 178 305 Q267 299 356 344 Q444 449 533 497 Q622 469 711 497 Q800 190 889 262 Q978 215 1067 300 Q1156 338 1244 367 Q1333 199 1422 292 Q1511 379 1600 417 L1600 1000Z" fill="#b98a7c"/>
+<path d="M0 1000 L0 700 Q-114 492 0 537 Q114 603 229 665 Q343 614 457 686 Q571 560 686 625 Q800 509 914 553 Q1029 670 1143 684 Q1257 662 1371 681 Q1486 600 1600 609 L1600 1000Z" fill="#7b3b4b"/>
+<path d="M0 760 Q800 700 1600 750" stroke="#3b1a26" stroke-width="3" fill="none" stroke-dasharray="6 4" opacity=".9"/>
+<path d="M0 776 Q800 719 1600 766" stroke="#3b1a26" stroke-width="3.6" fill="none" stroke-dasharray="7 4.5" opacity=".9"/>
+<path d="M0 792 Q800 738 1600 782" stroke="#3b1a26" stroke-width="4.2" fill="none" stroke-dasharray="8 5" opacity=".9"/>
+<path d="M0 808 Q800 757 1600 798" stroke="#3b1a26" stroke-width="4.8" fill="none" stroke-dasharray="9 5.5" opacity=".9"/>
+<path d="M0 824 Q800 776 1600 814" stroke="#3b1a26" stroke-width="5.4" fill="none" stroke-dasharray="10 6" opacity=".9"/>
+<path d="M0 840 Q800 795 1600 830" stroke="#3b1a26" stroke-width="6" fill="none" stroke-dasharray="11 6.5" opacity=".9"/>
+<path d="M0 856 Q800 814 1600 846" stroke="#3b1a26" stroke-width="6.6" fill="none" stroke-dasharray="12 7" opacity=".9"/>
+<path d="M0 872 Q800 833 1600 862" stroke="#3b1a26" stroke-width="7.2" fill="none" stroke-dasharray="13 7.5" opacity=".9"/>
+<path d="M0 888 Q800 852 1600 878" stroke="#3b1a26" stroke-width="7.8" fill="none" stroke-dasharray="14 8" opacity=".9"/>
+<path d="M0 904 Q800 871 1600 894" stroke="#3b1a26" stroke-width="8.399999999999999" fill="none" stroke-dasharray="15 8.5" opacity=".9"/>
+<path d="M0 920 Q800 890 1600 910" stroke="#3b1a26" stroke-width="9" fill="none" stroke-dasharray="16 9" opacity=".9"/>
+<path d="M0 936 Q800 909 1600 926" stroke="#3b1a26" stroke-width="9.6" fill="none" stroke-dasharray="17 9.5" opacity=".9"/>
+<path d="M0 952 Q800 928 1600 942" stroke="#3b1a26" stroke-width="10.2" fill="none" stroke-dasharray="18 10" opacity=".9"/>
+<path d="M0 968 Q800 947 1600 958" stroke="#3b1a26" stroke-width="10.8" fill="none" stroke-dasharray="19 10.5" opacity=".9"/>
+<path d="M0 984 Q800 966 1600 974" stroke="#3b1a26" stroke-width="11.4" fill="none" stroke-dasharray="20 11" opacity=".9"/>
+<path d="M0 1000 Q800 985 1600 990" stroke="#3b1a26" stroke-width="12" fill="none" stroke-dasharray="21 11.5" opacity=".9"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

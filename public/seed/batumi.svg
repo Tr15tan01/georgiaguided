@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of the Black Sea coast with a modern skyline">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5e3cf"/><stop offset="1" stop-color="#6f9fb3"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#6f9fb3" stop-opacity="0"/><stop offset="1" stop-color="#1d3a4a" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="804" cy="306" r="89" fill="#fff4df" opacity=".85"/>
+<path d="M0 1000 L0 560 Q-89 458 0 542 Q89 353 178 408 Q267 449 356 460 Q444 426 533 442 Q622 364 711 401 Q800 253 889 301 Q978 366 1067 472 Q1156 356 1244 430 Q1333 410 1422 418 Q1511 386 1600 495 L1600 1000Z" fill="#8fb3c2"/>
+<path d="M0 1000 L0 700 Q-114 568 0 610 Q114 506 229 516 Q343 470 457 501 Q571 619 686 697 Q800 476 914 506 Q1029 585 1143 613 Q1257 550 1371 594 Q1486 575 1600 594 L1600 1000Z" fill="#3f6f86"/>
+<rect y="760" width="1600" height="240" fill="#1d3a4a" opacity=".85"/>
+<path d="M383.793949700796 790 h151.41858528899894" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M106.42583179586839 810 h182.73771350399485" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M1336.5700393619807 830 h163.73160649264773" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M674.7153168892094 850 h233.18068079332852" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M942.3933178849487 870 h149.0849934094981" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M1325.4870425562779 890 h155.5113420987089" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M1392.358213752675 910 h121.65697613808186" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M1126.9820864903656 930 h147.19173069446896" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M99.90559197026565 950 h138.66105648626623" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<path d="M1368.2931909189995 970 h137.56111721394635" stroke="#f5e3cf" stroke-width="2" opacity=".35"/>
+<rect x="900" y="552.8787315044918" width="50" height="207.12126849550813" fill="#3f6f86" opacity=".9"/>
+<rect x="970" y="592.8403959948757" width="50" height="167.15960400512424" fill="#3f6f86" opacity=".9"/>
+<rect x="1040" y="628.5354858769734" width="50" height="131.46451412302653" fill="#3f6f86" opacity=".9"/>
+<rect x="1110" y="555.9111342932615" width="50" height="204.0888657067385" fill="#3f6f86" opacity=".9"/>
+<rect x="1180" y="558.4340668462376" width="50" height="201.56593315376244" fill="#3f6f86" opacity=".9"/>
+<rect x="1250" y="561.3614847144863" width="50" height="198.63851528551362" fill="#3f6f86" opacity=".9"/>
+<rect x="1320" y="562.4735963728622" width="50" height="197.52640362713782" fill="#3f6f86" opacity=".9"/>
+<rect x="1390" y="453.7342386942982" width="50" height="306.2657613057018" fill="#3f6f86" opacity=".9"/>
+<rect x="1460" y="471.34973506971716" width="50" height="288.65026493028284" fill="#3f6f86" opacity=".9"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

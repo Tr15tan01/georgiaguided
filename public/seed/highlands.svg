@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of layered mountain ridges in soft light">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe8ec"/><stop offset="1" stop-color="#8fb0c4"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8fb0c4" stop-opacity="0"/><stop offset="1" stop-color="#2d3e48" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="1052" cy="257" r="71" fill="#ffffff" opacity=".85"/>
+<path d="M0 1000 L0 560 L0 476 L178 371 L356 490 L533 362 L711 553 L889 403 L1067 332 L1244 251 L1422 390 L1600 250 L1600 1000Z" fill="#a9bccb"/>
+<path d="M0 1000 L0 470 L0 292 L229 307 L457 460 L686 443 L914 422 L1143 342 L1371 325 L1600 401 L1600 1000Z" fill="#ffffff" opacity=".35"/>
+<path d="M0 1000 L0 700 L0 618 L229 650 L457 509 L686 557 L914 517 L1143 659 L1371 594 L1600 583 L1600 1000Z" fill="#5f7a8c"/>
+<path d="M0 1000 L0 860 L0 730 L267 820 L533 811 L800 743 L1067 731 L1333 794 L1600 765 L1600 1000Z" fill="#2d3e48"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

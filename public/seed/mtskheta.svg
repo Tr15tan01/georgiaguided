@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of a hilltop monastery above a river confluence">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ece3d3"/><stop offset="1" stop-color="#b89b7a"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#b89b7a" stop-opacity="0"/><stop offset="1" stop-color="#4a3a2c" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="618" cy="313" r="92" fill="#fff6e6" opacity=".85"/>
+<path d="M0 1000 L0 560 L0 262 L178 334 L356 346 L533 304 L711 391 L889 548 L1067 277 L1244 472 L1422 326 L1600 547 L1600 1000Z" fill="#b8a58c"/>
+<path d="M0 1000 L0 470 L0 379 L229 415 L457 434 L686 408 L914 368 L1143 318 L1371 378 L1600 301 L1600 1000Z" fill="#f2e6d0" opacity=".35"/>
+<path d="M0 1000 L0 700 L0 592 L229 599 L457 686 L686 671 L914 565 L1143 637 L1371 532 L1600 601 L1600 1000Z" fill="#8a6f55"/>
+<path d="M0 1000 V760 Q400 700 800 740 T1600 720 V1000Z" fill="#4a3a2c"/>
+<g fill="#4a3a2c"><rect x="700" y="600" width="200" height="140"/><rect x="765" y="540" width="70" height="60"/><path d="M760 540 l40 -50 l40 50z"/><path d="M800 490 v-26 M790 474 h20" stroke="#4a3a2c" stroke-width="5"/></g>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

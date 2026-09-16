@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of rolling hills and a distant road">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4ead9"/><stop offset="1" stop-color="#9fb18e"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#9fb18e" stop-opacity="0"/><stop offset="1" stop-color="#243021" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="1114" cy="335" r="96" fill="#fbf6e4" opacity=".85"/>
+<path d="M0 1000 L0 560 L0 459 L178 377 L356 510 L533 512 L711 246 L889 288 L1067 388 L1244 266 L1422 305 L1600 443 L1600 1000Z" fill="#8ea084"/>
+<path d="M0 1000 L0 470 L0 337 L229 435 L457 321 L686 277 L914 429 L1143 289 L1371 460 L1600 387 L1600 1000Z" fill="#dfe7c8" opacity=".35"/>
+<path d="M0 1000 L0 700 L0 507 L229 629 L457 684 L686 598 L914 567 L1143 605 L1371 517 L1600 523 L1600 1000Z" fill="#4f6147"/>
+<path d="M0 1000 L0 860 Q-133 796 0 801 Q133 835 267 842 Q400 770 533 789 Q667 742 800 773 Q933 793 1067 806 Q1200 748 1333 783 Q1467 832 1600 846 L1600 1000Z" fill="#243021"/>
+<path d="M560 1000 C 700 880, 900 860, 1000 760 S 1250 690 1400 700" stroke="#dfe7c8" stroke-width="10" fill="none" opacity=".55"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>

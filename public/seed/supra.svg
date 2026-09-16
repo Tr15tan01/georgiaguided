@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of a Georgian supra table with shared dishes and wine">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dcc0"/><stop offset="1" stop-color="#b2665b"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#b2665b" stop-opacity="0"/><stop offset="1" stop-color="#3b1a26" stop-opacity=".35"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#s)"/>
+<circle cx="866" cy="264" r="74" fill="#ffe9c4" opacity=".85"/>
+<path d="M0 1000 L0 560 Q-89 444 0 526 Q89 301 178 428 Q267 427 356 483 Q444 487 533 497 Q622 224 711 316 Q800 279 889 375 Q978 158 1067 242 Q1156 333 1244 443 Q1333 294 1422 311 Q1511 189 1600 312 L1600 1000Z" fill="#b98a7c"/>
+<path d="M0 1000 L0 700 Q-114 559 0 585 Q114 534 229 566 Q343 569 457 625 Q571 487 686 551 Q800 478 914 537 Q1029 609 1143 638 Q1257 503 1371 537 Q1486 571 1600 592 L1600 1000Z" fill="#7b3b4b"/>
+<rect y="720" width="1600" height="280" fill="#3b1a26"/>
+<ellipse cx="200" cy="800" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<ellipse cx="400" cy="860" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<path d="M490 760 h22 l-4 70 h-14z" fill="#7b3b4b"/>
+<ellipse cx="600" cy="800" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<ellipse cx="800" cy="860" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<ellipse cx="1000" cy="800" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<path d="M1090 700 h22 l-4 70 h-14z" fill="#7b3b4b"/>
+<ellipse cx="1200" cy="860" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<ellipse cx="1400" cy="800" rx="80" ry="24" fill="#e8c07d" opacity=".75"/>
+<rect width="1600" height="1000" fill="url(#haze)"/>
+</svg>
