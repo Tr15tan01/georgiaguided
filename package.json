@@ -4,7 +4,7 @@
   "private": true,
   "description": "GeorgiaGuided \u2014 premium travel website and CMS for journeys in Georgia",
   "engines": {
-    "node": ">=20.12.0"
+    "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "next dev",

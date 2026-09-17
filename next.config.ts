@@ -19,7 +19,10 @@ const siteHost = (() => {
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  serverExternalPackages: ["mongoose", "sanitize-html"],
+  // Only mongoose is external. sanitize-html must be bundled: it is CommonJS but depends on
+  // htmlparser2 v12, which is ESM-only, so loading it with require() at runtime fails on
+  // Node < 22.12 (ERR_REQUIRE_ESM) and breaks every server action in the same chunk.
+  serverExternalPackages: ["mongoose"],
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [60, 75, 85],

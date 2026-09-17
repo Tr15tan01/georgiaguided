@@ -8,7 +8,9 @@ A premium travel website and content management system for a company that brings
 
 ## Quick start
 
-Requirements: **Node.js 20.12+** (22 LTS recommended) and a **MongoDB** database (MongoDB Atlas free tier is fine).
+Requirements: **Node.js 22.12 or newer** and a **MongoDB** database (MongoDB Atlas free tier is fine).
+
+> On Vercel, set the Node.js version to **22.x** under Settings → General → Node.js Version. Older versions cannot load some of the ESM-only dependencies and every admin action fails with a 500. A `.nvmrc` file is included for local use.
 
 ```bash
 npm install
@@ -55,11 +57,12 @@ Sign in at **http://localhost:3000/admin** with `ADMIN_EMAIL` / `ADMIN_PASSWORD`
 
 1. Push the project to GitHub and import it in Vercel (framework preset: Next.js).
 2. Add all environment variables above for **Production** (and Preview if used). `MONGODB_URI` must be available **during the build**, because public pages are pre-rendered from the database and refreshed every 5 minutes (and immediately after admin edits).
-3. In MongoDB Atlas → Network Access, allow Vercel to connect (Vercel's IP ranges, or `0.0.0.0/0` combined with a strong, database-scoped user).
-4. Run the seed once against the production database from your machine:
+3. Set **Node.js Version** to 22.x in Settings → General.
+4. In MongoDB Atlas → Network Access, allow Vercel to connect (Vercel's IP ranges, or `0.0.0.0/0` combined with a strong, database-scoped user).
+5. Run the seed once against the production database from your machine:
    `MONGODB_URI="…" ADMIN_EMAIL="…" ADMIN_PASSWORD="…" npm run db:seed`
-5. Set `NEXT_PUBLIC_SITE_URL` to the final domain and redeploy after adding the domain.
-6. In Resend, verify your sending domain and set `EMAIL_FROM`.
+6. Set `NEXT_PUBLIC_SITE_URL` to the final domain and redeploy after adding the domain.
+7. In Resend, verify your sending domain and set `EMAIL_FROM`.
 
 The app runs on the Node.js runtime throughout (including `src/proxy.ts`, the Next 16 replacement for middleware).
 
@@ -102,6 +105,7 @@ The app runs on the Node.js runtime throughout (including `src/proxy.ts`, the Ne
 - Pages: section builder for the homepage and every other page.
 - Media library (Cloudinary): upload, search, alt text, usage count; images in use cannot be deleted.
 - Settings: company details, navigation, footer, default SEO, analytics, inquiry form choices.
+- **Diagnostics** (`/admin/diagnostics`): one click checks that the server can read your session, reach the database and see its configuration. Start here whenever something in the admin misbehaves — admin actions report readable errors rather than a generic 500.
 - **Security:** Auth.js credentials with bcrypt hashes and 8-hour sessions; every admin page and server action checks the session; failed sign-ins are rate-limited (8 per 15 minutes per IP); `/admin` is `noindex`; security headers are set in `next.config.ts`; Markdown is sanitised before rendering; server actions carry Next.js' built-in CSRF protection.
 
 ### SEO
@@ -142,5 +146,6 @@ src/
 
 ## Notes
 
+- **Bundling:** only `mongoose` is listed in `serverExternalPackages`. `sanitize-html` must stay bundled, because its `htmlparser2` dependency is ESM-only and cannot be `require()`d at runtime on older Node versions.
 - Fonts (Cormorant Garamond, Instrument Sans) are bundled in `src/fonts`, so builds don't need network access to Google Fonts.
 - The seed uses local SVG illustrations so the site looks complete without Cloudinary. Uploaded Cloudinary images are optimised automatically by `next/image`.
