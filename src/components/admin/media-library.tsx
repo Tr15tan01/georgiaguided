@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useState, useTransition } from "react";
 import { Copy, ImagePlus, Search, Trash2, Upload } from "lucide-react";
 import { deleteMedia, listMedia, mediaUsage, updateMedia, uploadMedia } from "@/actions/admin/media";
 import type { MediaItem } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { ConfirmButton } from "./confirm";
+import { Thumb } from "./thumb";
 import { useToast } from "./toast";
 
 export function MediaLibrary() {
@@ -25,14 +25,20 @@ export function MediaLibrary() {
 
   const load = useCallback((query: string, p: number) => {
     start(async () => {
-      const res = await listMedia(query, p);
-      setItems(res.items);
-      setPages(res.pages);
-      setTotal(res.total);
-      setConfigured(res.configured);
-      setLoaded(true);
+      try {
+        const res = await listMedia(query, p);
+        setItems(res.items);
+        setPages(res.pages);
+        setTotal(res.total);
+        setConfigured(res.configured);
+      } catch (err) {
+        console.error("[media] list failed", err);
+        toast("error", "The media library couldn't be loaded. Reload the page and try again.");
+      } finally {
+        setLoaded(true);
+      }
     });
-  }, []);
+  }, [toast]);
   useEffect(() => load("", 1), [load]);
 
   const upload = (files: FileList | File[] | null) => {
@@ -40,7 +46,14 @@ export function MediaLibrary() {
     const fd = new FormData();
     [...files].forEach((f) => fd.append("files", f));
     startUpload(async () => {
-      const res = await uploadMedia(fd);
+      let res: Awaited<ReturnType<typeof uploadMedia>>;
+      try {
+        res = await uploadMedia(fd);
+      } catch (err) {
+        console.error("[media] upload failed", err);
+        toast("error", "Upload failed. Images must be under 10 MB and Cloudinary must be configured.");
+        return;
+      }
       toast(res.ok ? "success" : "error", res.message);
       if (res.ok && res.items) { setItems((c) => [...res.items!, ...c]); setTotal((t) => t + res.items!.length); setSelected(res.items[0]); }
     });
@@ -87,7 +100,7 @@ export function MediaLibrary() {
                     aria-pressed={selected?._id === m._id}
                     className={cn("relative block aspect-square w-full overflow-hidden rounded-md border-2 bg-line", selected?._id === m._id ? "border-accent" : "border-transparent")}
                   >
-                    <Image src={m.url} alt={m.alt} fill sizes="200px" className="object-cover" unoptimized={m.url.endsWith(".svg")} />
+                    <Thumb src={m.url} alt={m.alt} width={320} />
                     {!m.alt && <span className="adm-badge absolute left-1.5 top-1.5 bg-[#b3261e] text-white">No alt</span>}
                   </button>
                   <p className="mt-1 truncate text-xs text-ink-soft">{m.alt || m.publicId}</p>
@@ -132,7 +145,7 @@ function MediaDetails({ item, onSaved, onDeleted }: { item: MediaItem; onSaved: 
   return (
     <div className="adm-card overflow-hidden">
       <div className="relative aspect-[4/3] bg-line">
-        <Image src={item.url} alt={item.alt} fill sizes="360px" className="object-contain" unoptimized={item.url.endsWith(".svg")} />
+        <Thumb src={item.url} alt={item.alt} width={720} contain />
       </div>
       <form
         className="space-y-3 p-5"

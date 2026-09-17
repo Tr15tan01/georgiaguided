@@ -27,18 +27,22 @@ export function SmartImage({ image, sizes, priority, className, imgClassName, fa
       />
     );
   }
-  const isSvg = image.url.endsWith(".svg");
+  const url = image.url.trim();
+  const isSvg = /\.svg($|\?)/i.test(url);
+  // Only local files and Cloudinary are whitelisted for the optimizer; anything else is served
+  // as-is instead of throwing and breaking the page.
+  const optimizable = url.startsWith("/") || /^https:\/\/res\.cloudinary\.com\//.test(url);
   return (
     <div className={cn("absolute inset-0 overflow-hidden", className)}>
       <Image
-        src={image.url}
+        src={url}
         alt={image.alt ?? ""}
         fill
         sizes={sizes}
         priority={priority}
         fetchPriority={priority ? "high" : undefined}
         quality={quality}
-        unoptimized={isSvg}
+        unoptimized={isSvg || !optimizable}
         className={cn("object-cover", imgClassName)}
       />
     </div>

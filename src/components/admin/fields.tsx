@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useId, useMemo, useRef, useState, useTransition } from "react";
 import { Bold, ChevronDown, Eye, Heading2, Heading3, ImagePlus, Italic, Link2, List, ListOrdered, Pencil, Plus, Quote, Search, X } from "lucide-react";
 import type { Field, RefOptions } from "@/admin/fields";
@@ -10,6 +9,7 @@ import { cn, slugify } from "@/lib/utils";
 import { previewMarkdown } from "@/actions/admin/preview";
 import { ImageField, MediaDialog, toRef } from "./image-picker";
 import { SortableList } from "./sortable-list";
+import { Thumb } from "./thumb";
 
 type Doc = Record<string, unknown>;
 
@@ -233,7 +233,7 @@ function GalleryField({ value, onChange }: { value: MediaRef[]; onChange: (v: Me
           render={(m, i) => (
             <div className="space-y-1.5">
               <div className="relative aspect-[4/3] overflow-hidden rounded bg-line">
-                <Image src={m.url} alt={m.alt} fill sizes="200px" className="object-cover" unoptimized={m.url.endsWith(".svg")} />
+                <Thumb src={m.url} alt={m.alt} width={320} />
               </div>
               <input aria-label={`Alt text for image ${i + 1}`} placeholder="Alt text" className="adm-input !min-h-8 text-xs" value={m.alt} onChange={(e) => onChange(value.map((x, j) => (j === i ? { ...x, alt: e.target.value } : x)))} />
             </div>

@@ -18,11 +18,14 @@ export async function listMedia(query = "", page = 1): Promise<{ items: MediaIte
   const perPage = 30;
   const q = query.trim().slice(0, 100);
   const filter = q ? { $or: [{ alt: { $regex: escapeRegex(q), $options: "i" } }, { publicId: { $regex: escapeRegex(q), $options: "i" } }] } : {};
+  const safePage = Number.isFinite(page) ? Math.max(1, Math.floor(page)) : 1;
   const [items, total] = await Promise.all([
-    Media.find(filter).sort({ createdAt: -1 }).skip((Math.max(1, page) - 1) * perPage).limit(perPage).lean(),
+    Media.find(filter).sort({ createdAt: -1, _id: -1 }).skip((safePage - 1) * perPage).limit(perPage).lean(),
     Media.countDocuments(filter),
   ]);
-  return { items: serialize(items), total, pages: Math.max(1, Math.ceil(total / perPage)), configured: cloudinaryConfigured() };
+  // Skip broken records (e.g. a missing URL) so one bad entry can't break the picker.
+  const clean = serialize<MediaItem[]>(items).filter((m) => typeof m.url === "string" && m.url.trim() !== "");
+  return { items: clean, total, pages: Math.max(1, Math.ceil(total / perPage)), configured: cloudinaryConfigured() };
 }
 
 export async function uploadMedia(fd: FormData): Promise<{ ok: boolean; message: string; items?: MediaItem[] }> {
