@@ -6,13 +6,18 @@ import { requireAdmin } from "@/lib/auth-guard";
 import { cloudinaryConfigured, destroyAsset, uploadBuffer } from "@/lib/cloudinary";
 import { Activity, BlogPost, Destination, Media, Page, Service, SiteSettings, Tour } from "@/models";
 import type { MediaItem } from "@/lib/types";
+import { guard } from "@/lib/action-error";
 
 const ALLOWED = new Set(["image/jpeg", "image/png", "image/webp", "image/avif", "image/gif"]);
 const MAX_BYTES = 10 * 1024 * 1024;
 const validId = (id: string) => /^[a-f0-9]{24}$/i.test(id);
 const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-export async function listMedia(query = "", page = 1): Promise<{ items: MediaItem[]; total: number; pages: number; configured: boolean }> {
+export async function listMedia(query = "", page = 1): Promise<{ items: MediaItem[]; total: number; pages: number; configured: boolean; error?: string }> {
+  return guard("listMedia", () => listMediaInner(query, page), (error) => ({ items: [], total: 0, pages: 1, configured: false, error }));
+}
+
+async function listMediaInner(query: string, page: number): Promise<{ items: MediaItem[]; total: number; pages: number; configured: boolean }> {
   await requireAdmin();
   await connectDB();
   const perPage = 30;
@@ -29,6 +34,10 @@ export async function listMedia(query = "", page = 1): Promise<{ items: MediaIte
 }
 
 export async function uploadMedia(fd: FormData): Promise<{ ok: boolean; message: string; items?: MediaItem[] }> {
+  return guard("uploadMedia", () => uploadMediaInner(fd), (message) => ({ ok: false, message }));
+}
+
+async function uploadMediaInner(fd: FormData): Promise<{ ok: boolean; message: string; items?: MediaItem[] }> {
   const admin = await requireAdmin();
   if (!cloudinaryConfigured()) return { ok: false, message: "Cloudinary is not configured. Add the CLOUDINARY_* environment variables." };
   const files = fd.getAll("files").filter((f): f is File => f instanceof File && f.size > 0).slice(0, 10);

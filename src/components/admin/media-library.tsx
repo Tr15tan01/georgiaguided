@@ -31,6 +31,7 @@ export function MediaLibrary() {
         setPages(res.pages);
         setTotal(res.total);
         setConfigured(res.configured);
+        if (res.error) toast("error", res.error);
       } catch (err) {
         console.error("[media] list failed", err);
         toast("error", "The media library couldn't be loaded. Reload the page and try again.");

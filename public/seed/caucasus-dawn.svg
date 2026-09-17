@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of Caucasus peaks at dawn with a hilltop church">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d9b1"/><stop offset="1" stop-color="#c97b63"/></linearGradient>
-<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#c97b63" stop-opacity="0"/><stop offset="1" stop-color="#2c2233" stop-opacity=".35"/></linearGradient></defs>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7e9cf"/><stop offset="1" stop-color="#8fae7f"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8fae7f" stop-opacity="0"/><stop offset="1" stop-color="#1f3326" stop-opacity=".35"/></linearGradient></defs>
 <rect width="1600" height="1000" fill="url(#s)"/>
-<circle cx="308" cy="285" r="84" fill="#fff2d6" opacity=".85"/>
-<path d="M0 1000 L0 560 L0 345 L178 307 L356 243 L533 545 L711 275 L889 462 L1067 331 L1244 394 L1422 423 L1600 241 L1600 1000Z" fill="#9c6b73"/>
-<path d="M0 1000 L0 470 L0 356 L229 378 L457 330 L686 440 L914 330 L1143 387 L1371 302 L1600 373 L1600 1000Z" fill="#f7e9d0" opacity=".35"/>
-<path d="M0 1000 L0 700 L0 545 L229 505 L457 613 L686 667 L914 514 L1143 507 L1371 516 L1600 500 L1600 1000Z" fill="#5d4458"/>
-<g fill="#2c2233"><path d="M1030 610 h110 v-70 h-110z"/><path d="M1060 540 h50 v-50 h-50z"/><path d="M1055 490 l30 -45 l30 45z"/><path d="M990 610 h60 v-40 h-60z"/><path d="M985 570 l35 -25 l35 25z"/></g>
+<circle cx="308" cy="285" r="84" fill="#fbfae6" opacity=".85"/>
+<path d="M0 1000 L0 560 L0 345 L178 307 L356 243 L533 545 L711 275 L889 462 L1067 331 L1244 394 L1422 423 L1600 241 L1600 1000Z" fill="#7d9a72"/>
+<path d="M0 1000 L0 470 L0 356 L229 378 L457 330 L686 440 L914 330 L1143 387 L1371 302 L1600 373 L1600 1000Z" fill="#eef3dd" opacity=".35"/>
+<path d="M0 1000 L0 700 L0 545 L229 505 L457 613 L686 667 L914 514 L1143 507 L1371 516 L1600 500 L1600 1000Z" fill="#4a6b4c"/>
+<g fill="#1f3326"><path d="M1030 610 h110 v-70 h-110z"/><path d="M1060 540 h50 v-50 h-50z"/><path d="M1055 490 l30 -45 l30 45z"/><path d="M990 610 h60 v-40 h-60z"/><path d="M985 570 l35 -25 l35 25z"/></g>
 <rect width="1600" height="1000" fill="url(#haze)"/>
 </svg>

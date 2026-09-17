@@ -33,11 +33,11 @@ export function MediaDialog({ open, onClose, onSelect, multiple }: { open: boole
         setItems(Array.isArray(res?.items) ? res.items.filter((i) => i && i._id) : []);
         setPages(res?.pages ?? 1);
         setConfigured(Boolean(res?.configured));
-        setError(null);
+        setError(res?.error ?? null);
       } catch (err) {
         // Never let a failed request take down the editor (unsaved work would be lost).
         console.error("[media] list failed", err);
-        setError("The media library couldn't be loaded. Check your connection and try again. If it keeps happening, your session may have expired — reload the page and sign in again.");
+        setError("The server couldn't handle this request (HTTP 500). Open Admin → Diagnostics to see which part is failing, and check your host's function logs.");
       }
     });
   }, []);

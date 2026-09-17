@@ -5,33 +5,34 @@
 
 /*
   GeorgiaGuided tokens
-  Light: tuff-stone paper, walnut ink, Saperavi wine, moss, brass.
-  Dark:  night-slate, warm parchment ink, brass and a lifted Saperavi.
+  Light: pale vine-leaf paper, deep forest ink, Caucasus pine accent, olive and brass.
+  Dark:  night-forest, warm parchment ink, soft pine-sage accent and brass.
+  --wine is kept as the accent variable name so every component picks the colour up.
 */
 :root {
-  --paper: #edeee8;
-  --paper-raised: #f7f7f3;
-  --ink: #1e1b18;
-  --ink-soft: #57524b;
-  --line: #d3d3c9;
-  --wine: #6b1f3a;
+  --paper: #eceee6;
+  --paper-raised: #f6f8f2;
+  --ink: #17231b;
+  --ink-soft: #4c5a50;
+  --line: #cdd5c8;
+  --wine: #245c3d;      /* primary accent — pine green */
   --wine-ink: #ffffff;
-  --moss: #4f5c44;
-  --brass: #8a6d32;
-  --focus: #6b1f3a;
+  --moss: #4f6b45;
+  --brass: #8a7a32;
+  --focus: #245c3d;
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --paper: #151517;
-  --paper-raised: #1e1d21;
-  --ink: #ece6dc;
-  --ink-soft: #aaa398;
-  --line: #34323a;
-  --wine: #c9a45c;
-  --wine-ink: #151517;
-  --moss: #9fae8f;
-  --brass: #c9a45c;
-  --focus: #e0c07f;
+  --paper: #10150f;
+  --paper-raised: #182018;
+  --ink: #e6ecdf;
+  --ink-soft: #a3b0a1;
+  --line: #2c362c;
+  --wine: #7fc49a;      /* lifted sage for contrast on dark */
+  --wine-ink: #0d1410;
+  --moss: #a9c096;
+  --brass: #cbb56a;
+  --focus: #9fdcb6;
   color-scheme: dark;
 }
 

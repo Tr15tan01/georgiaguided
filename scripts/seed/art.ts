@@ -8,13 +8,13 @@ import path from "node:path";
 type Palette = { sky: [string, string]; far: string; mid: string; near: string; sun: string; accent: string };
 
 const P: Record<string, Palette> = {
-  dawn: { sky: ["#f3d9b1", "#c97b63"], far: "#9c6b73", mid: "#5d4458", near: "#2c2233", sun: "#fff2d6", accent: "#f7e9d0" },
-  alpine: { sky: ["#dfe8ec", "#8fb0c4"], far: "#a9bccb", mid: "#5f7a8c", near: "#2d3e48", sun: "#ffffff", accent: "#ffffff" },
-  wine: { sky: ["#f1dcc0", "#b2665b"], far: "#b98a7c", mid: "#7b3b4b", near: "#3b1a26", sun: "#ffe9c4", accent: "#e8c07d" },
-  dusk: { sky: ["#2b2640", "#8e4a5c"], far: "#4a3a57", mid: "#2f2740", near: "#16131f", sun: "#f3c77e", accent: "#f3c77e" },
+  dawn: { sky: ["#e7e9cf", "#8fae7f"], far: "#7d9a72", mid: "#4a6b4c", near: "#1f3326", sun: "#fbfae6", accent: "#eef3dd" },
+  alpine: { sky: ["#dfe9e0", "#8fb0a2"], far: "#a8c0ae", mid: "#5c7d6b", near: "#273b30", sun: "#ffffff", accent: "#ffffff" },
+  wine: { sky: ["#eaeecb", "#9bb06a"], far: "#93a86f", mid: "#4f6b3a", near: "#22331d", sun: "#f7f7d9", accent: "#cbd889" },
+  dusk: { sky: ["#20302a", "#3f6a4d"], far: "#2f4a39", mid: "#22362a", near: "#101a13", sun: "#bfe0c6", accent: "#9ccfae" },
   forest: { sky: ["#e4ead9", "#9fb18e"], far: "#8ea084", mid: "#4f6147", near: "#243021", sun: "#fbf6e4", accent: "#dfe7c8" },
-  sea: { sky: ["#f5e3cf", "#6f9fb3"], far: "#8fb3c2", mid: "#3f6f86", near: "#1d3a4a", sun: "#fff4df", accent: "#f5e3cf" },
-  stone: { sky: ["#ece3d3", "#b89b7a"], far: "#b8a58c", mid: "#8a6f55", near: "#4a3a2c", sun: "#fff6e6", accent: "#f2e6d0" },
+  sea: { sky: ["#e9f0dd", "#6fa693"], far: "#8fbba9", mid: "#3f7a66", near: "#1d3a30", sun: "#f6fbe9", accent: "#dff0e2" },
+  stone: { sky: ["#ecefdc", "#a8b487"], far: "#aebb92", mid: "#76855c", near: "#3b4630", sun: "#fbfdec", accent: "#e8eecf" },
 };
 
 function rng(seed: number) {

@@ -5,6 +5,7 @@ import type { Model } from "mongoose";
 import type { z } from "zod";
 import { connectDB } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth-guard";
+import { guard } from "@/lib/action-error";
 import { Activity, BlogPost, Destination, FAQ, Page, Service, SiteSettings, Testimonial, Tour } from "@/models";
 import {
   blogPostSchema, destinationSchema, faqSchema, fieldErrors, pageSchema, serviceSchema, settingsSchema,
@@ -53,6 +54,10 @@ async function log(action: string, entity: string, entityId: string, label: stri
 }
 
 export async function saveResource(resource: string, id: string | null, json: string): Promise<SaveResult> {
+  return guard("saveResource", () => saveResourceInner(resource, id, json), (message) => ({ ok: false, message }));
+}
+
+async function saveResourceInner(resource: string, id: string | null, json: string): Promise<SaveResult> {
   const admin = await requireAdmin();
   if (resource !== "pages" && !isResourceKey(resource)) return { ok: false, message: "Unknown content type." };
   const key = resource as ResourceKey | "pages";
@@ -107,6 +112,10 @@ export async function saveResource(resource: string, id: string | null, json: st
 }
 
 export async function deleteResource(resource: string, id: string): Promise<SaveResult> {
+  return guard("deleteResource", () => deleteResourceInner(resource, id), (message) => ({ ok: false, message }));
+}
+
+async function deleteResourceInner(resource: string, id: string): Promise<SaveResult> {
   const admin = await requireAdmin();
   if ((resource !== "pages" && !isResourceKey(resource)) || !/^[a-f0-9]{24}$/i.test(id)) return { ok: false, message: "Invalid request." };
   await connectDB();
@@ -129,6 +138,10 @@ export async function deleteResource(resource: string, id: string): Promise<Save
 }
 
 export async function setStatus(resource: string, id: string, status: "draft" | "published"): Promise<SaveResult> {
+  return guard("setStatus", () => setStatusInner(resource, id, status), (message) => ({ ok: false, message }));
+}
+
+async function setStatusInner(resource: string, id: string, status: "draft" | "published"): Promise<SaveResult> {
   const admin = await requireAdmin();
   if ((resource !== "pages" && !isResourceKey(resource)) || !/^[a-f0-9]{24}$/i.test(id)) return { ok: false, message: "Invalid request." };
   if (status !== "draft" && status !== "published") return { ok: false, message: "Invalid status." };
@@ -147,6 +160,10 @@ export async function setStatus(resource: string, id: string, status: "draft" | 
 }
 
 export async function saveSettings(json: string): Promise<SaveResult> {
+  return guard("saveSettings", () => saveSettingsInner(json), (message) => ({ ok: false, message }));
+}
+
+async function saveSettingsInner(json: string): Promise<SaveResult> {
   const admin = await requireAdmin();
   let payload: unknown;
   try {

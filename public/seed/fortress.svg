@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of fortress walls on a ridge">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2640"/><stop offset="1" stop-color="#8e4a5c"/></linearGradient>
-<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8e4a5c" stop-opacity="0"/><stop offset="1" stop-color="#16131f" stop-opacity=".35"/></linearGradient></defs>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20302a"/><stop offset="1" stop-color="#3f6a4d"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#3f6a4d" stop-opacity="0"/><stop offset="1" stop-color="#101a13" stop-opacity=".35"/></linearGradient></defs>
 <rect width="1600" height="1000" fill="url(#s)"/>
-<circle cx="990" cy="300" r="85" fill="#f3c77e" opacity=".85"/>
-<path d="M0 1000 L0 560 Q-89 415 0 493 Q89 462 178 469 Q267 513 356 530 Q444 147 533 277 Q622 406 711 475 Q800 463 889 522 Q978 403 1067 443 Q1156 419 1244 468 Q1333 391 1422 427 Q1511 258 1600 277 L1600 1000Z" fill="#4a3a57"/>
-<path d="M0 1000 L0 700 Q-114 461 0 534 Q114 592 229 666 Q343 648 457 671 Q571 623 686 660 Q800 561 914 599 Q1029 655 1143 690 Q1257 610 1371 622 Q1486 561 1600 586 L1600 1000Z" fill="#2f2740"/>
-<path d="M0 1000 V780 Q500 720 900 690 T1600 760 V1000Z" fill="#16131f"/>
-<path d="M820 690 v-120 h20 v-20 h20 v20 h20 v-20 h20 v20 h20 v120z M1000 690 v-80 h14 v-14 h14 v14 h14 v80z" fill="#16131f"/>
+<circle cx="990" cy="300" r="85" fill="#bfe0c6" opacity=".85"/>
+<path d="M0 1000 L0 560 Q-89 415 0 493 Q89 462 178 469 Q267 513 356 530 Q444 147 533 277 Q622 406 711 475 Q800 463 889 522 Q978 403 1067 443 Q1156 419 1244 468 Q1333 391 1422 427 Q1511 258 1600 277 L1600 1000Z" fill="#2f4a39"/>
+<path d="M0 1000 L0 700 Q-114 461 0 534 Q114 592 229 666 Q343 648 457 671 Q571 623 686 660 Q800 561 914 599 Q1029 655 1143 690 Q1257 610 1371 622 Q1486 561 1600 586 L1600 1000Z" fill="#22362a"/>
+<path d="M0 1000 V780 Q500 720 900 690 T1600 760 V1000Z" fill="#101a13"/>
+<path d="M820 690 v-120 h20 v-20 h20 v20 h20 v-20 h20 v20 h20 v120z M1000 690 v-80 h14 v-14 h14 v14 h14 v80z" fill="#101a13"/>
 <rect width="1600" height="1000" fill="url(#haze)"/>
 </svg>

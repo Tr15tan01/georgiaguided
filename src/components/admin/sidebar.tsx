@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   BookOpen, Compass, ExternalLink, FileText, HelpCircle, Images, Inbox, LayoutDashboard, LogOut, Map, Menu,
-  MessageSquareQuote, Settings, Sparkles, X,
+  MessageSquareQuote, Settings, Sparkles, Stethoscope, X,
 } from "lucide-react";
 import { logout } from "@/actions/admin/auth";
 import { ThemeToggle } from "@/components/public/theme-toggle";
@@ -25,7 +25,7 @@ const GROUPS = [
       { href: "/admin/faqs", label: "FAQs", icon: HelpCircle },
     ],
   },
-  { label: "Library", items: [{ href: "/admin/media", label: "Media", icon: Images }, { href: "/admin/settings", label: "Settings", icon: Settings }] },
+  { label: "Library", items: [{ href: "/admin/media", label: "Media", icon: Images }, { href: "/admin/settings", label: "Settings", icon: Settings }, { href: "/admin/diagnostics", label: "Diagnostics", icon: Stethoscope }] },
 ];
 
 export function AdminSidebar({ admin, newInquiries }: { admin: { name: string; email: string }; newInquiries: number }) {

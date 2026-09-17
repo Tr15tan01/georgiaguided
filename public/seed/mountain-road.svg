@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of a mountain road winding through the Caucasus">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d9b1"/><stop offset="1" stop-color="#c97b63"/></linearGradient>
-<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#c97b63" stop-opacity="0"/><stop offset="1" stop-color="#2c2233" stop-opacity=".35"/></linearGradient></defs>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7e9cf"/><stop offset="1" stop-color="#8fae7f"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8fae7f" stop-opacity="0"/><stop offset="1" stop-color="#1f3326" stop-opacity=".35"/></linearGradient></defs>
 <rect width="1600" height="1000" fill="url(#s)"/>
-<circle cx="928" cy="222" r="100" fill="#fff2d6" opacity=".85"/>
-<path d="M0 1000 L0 560 L0 509 L178 360 L356 449 L533 392 L711 507 L889 303 L1067 552 L1244 550 L1422 230 L1600 523 L1600 1000Z" fill="#9c6b73"/>
-<path d="M0 1000 L0 470 L0 402 L229 452 L457 338 L686 376 L914 406 L1143 450 L1371 454 L1600 430 L1600 1000Z" fill="#f7e9d0" opacity=".35"/>
-<path d="M0 1000 L0 700 L0 639 L229 693 L457 559 L686 675 L914 616 L1143 567 L1371 548 L1600 502 L1600 1000Z" fill="#5d4458"/>
-<path d="M0 1000 L0 860 Q-133 795 0 817 Q133 797 267 801 Q400 829 533 844 Q667 840 800 851 Q933 800 1067 810 Q1200 813 1333 814 Q1467 791 1600 796 L1600 1000Z" fill="#2c2233"/>
-<path d="M560 1000 C 700 880, 900 860, 1000 760 S 1250 690 1400 700" stroke="#f7e9d0" stroke-width="10" fill="none" opacity=".55"/>
+<circle cx="928" cy="222" r="100" fill="#fbfae6" opacity=".85"/>
+<path d="M0 1000 L0 560 L0 509 L178 360 L356 449 L533 392 L711 507 L889 303 L1067 552 L1244 550 L1422 230 L1600 523 L1600 1000Z" fill="#7d9a72"/>
+<path d="M0 1000 L0 470 L0 402 L229 452 L457 338 L686 376 L914 406 L1143 450 L1371 454 L1600 430 L1600 1000Z" fill="#eef3dd" opacity=".35"/>
+<path d="M0 1000 L0 700 L0 639 L229 693 L457 559 L686 675 L914 616 L1143 567 L1371 548 L1600 502 L1600 1000Z" fill="#4a6b4c"/>
+<path d="M0 1000 L0 860 Q-133 795 0 817 Q133 797 267 801 Q400 829 533 844 Q667 840 800 851 Q933 800 1067 810 Q1200 813 1333 814 Q1467 791 1600 796 L1600 1000Z" fill="#1f3326"/>
+<path d="M560 1000 C 700 880, 900 860, 1000 760 S 1250 690 1400 700" stroke="#eef3dd" stroke-width="10" fill="none" opacity=".55"/>
 <rect width="1600" height="1000" fill="url(#haze)"/>
 </svg>

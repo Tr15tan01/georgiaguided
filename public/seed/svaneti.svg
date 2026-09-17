@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Illustration of Svan defensive towers below high mountains">
-<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe8ec"/><stop offset="1" stop-color="#8fb0c4"/></linearGradient>
-<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8fb0c4" stop-opacity="0"/><stop offset="1" stop-color="#2d3e48" stop-opacity=".35"/></linearGradient></defs>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe9e0"/><stop offset="1" stop-color="#8fb0a2"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#8fb0a2" stop-opacity="0"/><stop offset="1" stop-color="#273b30" stop-opacity=".35"/></linearGradient></defs>
 <rect width="1600" height="1000" fill="url(#s)"/>
 <circle cx="556" cy="235" r="66" fill="#ffffff" opacity=".85"/>
-<path d="M0 1000 L0 560 L0 279 L178 328 L356 326 L533 484 L711 367 L889 333 L1067 552 L1244 456 L1422 412 L1600 354 L1600 1000Z" fill="#a9bccb"/>
+<path d="M0 1000 L0 560 L0 279 L178 328 L356 326 L533 484 L711 367 L889 333 L1067 552 L1244 456 L1422 412 L1600 354 L1600 1000Z" fill="#a8c0ae"/>
 <path d="M0 1000 L0 470 L0 334 L229 288 L457 373 L686 375 L914 361 L1143 372 L1371 443 L1600 316 L1600 1000Z" fill="#ffffff" opacity=".35"/>
-<path d="M0 1000 L0 700 L0 503 L229 620 L457 511 L686 630 L914 515 L1143 691 L1371 609 L1600 661 L1600 1000Z" fill="#5f7a8c"/>
-<g fill="#2d3e48"><rect x="384.1545628775631" y="527.9111372064385" width="42" height="272.0888627935615"/><path d="M380.1545628775631 527.9111372064385 h50 l-6 -18 h-38z"/><rect x="400.1545628775631" y="547.9111372064385" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<g fill="#2d3e48"><rect x="553.3257904943664" y="552.2618873381344" width="42" height="247.73811266186556"/><path d="M549.3257904943664 552.2618873381344 h50 l-6 -18 h-38z"/><rect x="569.3257904943664" y="572.2618873381344" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<g fill="#2d3e48"><rect x="718.0179964555512" y="489.0494640073969" width="42" height="310.9505359926031"/><path d="M714.0179964555512 489.0494640073969 h50 l-6 -18 h-38z"/><rect x="734.0179964555512" y="509.0494640073969" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<g fill="#2d3e48"><rect x="845.2629210312213" y="478.8059864047943" width="42" height="321.1940135952057"/><path d="M841.2629210312213 478.8059864047943 h50 l-6 -18 h-38z"/><rect x="861.2629210312213" y="498.8059864047943" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<g fill="#2d3e48"><rect x="998.7615579454049" y="482.38487394637656" width="42" height="317.61512605362344"/><path d="M994.7615579454049 482.38487394637656 h50 l-6 -18 h-38z"/><rect x="1014.7615579454049" y="502.38487394637656" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<g fill="#2d3e48"><rect x="1162.2561852225365" y="491.83632913131095" width="42" height="308.16367086868905"/><path d="M1158.2561852225365 491.83632913131095 h50 l-6 -18 h-38z"/><rect x="1178.2561852225365" y="511.83632913131095" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
-<path d="M0 1000 V800 Q400 740 800 770 T1600 760 V1000Z" fill="#2d3e48"/>
+<path d="M0 1000 L0 700 L0 503 L229 620 L457 511 L686 630 L914 515 L1143 691 L1371 609 L1600 661 L1600 1000Z" fill="#5c7d6b"/>
+<g fill="#273b30"><rect x="384.1545628775631" y="527.9111372064385" width="42" height="272.0888627935615"/><path d="M380.1545628775631 527.9111372064385 h50 l-6 -18 h-38z"/><rect x="400.1545628775631" y="547.9111372064385" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<g fill="#273b30"><rect x="553.3257904943664" y="552.2618873381344" width="42" height="247.73811266186556"/><path d="M549.3257904943664 552.2618873381344 h50 l-6 -18 h-38z"/><rect x="569.3257904943664" y="572.2618873381344" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<g fill="#273b30"><rect x="718.0179964555512" y="489.0494640073969" width="42" height="310.9505359926031"/><path d="M714.0179964555512 489.0494640073969 h50 l-6 -18 h-38z"/><rect x="734.0179964555512" y="509.0494640073969" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<g fill="#273b30"><rect x="845.2629210312213" y="478.8059864047943" width="42" height="321.1940135952057"/><path d="M841.2629210312213 478.8059864047943 h50 l-6 -18 h-38z"/><rect x="861.2629210312213" y="498.8059864047943" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<g fill="#273b30"><rect x="998.7615579454049" y="482.38487394637656" width="42" height="317.61512605362344"/><path d="M994.7615579454049 482.38487394637656 h50 l-6 -18 h-38z"/><rect x="1014.7615579454049" y="502.38487394637656" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<g fill="#273b30"><rect x="1162.2561852225365" y="491.83632913131095" width="42" height="308.16367086868905"/><path d="M1158.2561852225365 491.83632913131095 h50 l-6 -18 h-38z"/><rect x="1178.2561852225365" y="511.83632913131095" width="9" height="14" fill="#ffffff" opacity=".6"/></g>
+<path d="M0 1000 V800 Q400 740 800 770 T1600 760 V1000Z" fill="#273b30"/>
 <rect width="1600" height="1000" fill="url(#haze)"/>
 </svg>
